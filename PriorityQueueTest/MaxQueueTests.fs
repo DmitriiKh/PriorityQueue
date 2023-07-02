@@ -9,7 +9,8 @@ let maxElement = Seq.fold max elements[0] elements
 
 [<Test>]
 let MaxQueue_Extracts_MaxPriorityElement () =
-    let queue = insert elements
-    let extracted = extract queue
+    let state = insert elements
+    let extracted, left = extract state
 
     Assert.AreEqual(maxElement, extracted)
+    Assert.AreEqual(Seq.except [maxElement] elements, left)

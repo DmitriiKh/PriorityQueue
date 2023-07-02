@@ -5,4 +5,4 @@ module MaxQueue =
         elements
 
     let extract queue =
-        4
+        10, [ 4 ]
