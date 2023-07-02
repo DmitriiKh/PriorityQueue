@@ -12,5 +12,5 @@ let MaxQueue_Extracts_MaxPriorityElement () =
     let state = insert elements
     let extracted, left = extract state
 
-    Assert.AreEqual(maxElement, extracted)
-    Assert.AreEqual(Seq.except [maxElement] elements, left)
+    Assert.AreEqual(maxElement, extracted.Priority)
+    Assert.AreEqual(Seq.except [maxElement] elements, Seq.map (fun el -> el.Priority) left)
