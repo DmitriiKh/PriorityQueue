@@ -4,7 +4,7 @@ open NUnit.Framework
 open PriorityQueue.MaxQueue
 open Microsoft.FSharp.Collections
 
-let elements = [ 4; 10 ]
+let elements = [ 4; 10; 100 ]
 let maxElement = Seq.fold max elements[0] elements
 
 [<Test>]
